@@ -11,11 +11,17 @@ class App extends Component {
         }
     }
 
+    onAddClick = (inputValue) => {
+        this.setState({
+            contacts: [...this.state.contacts, inputValue]
+        })
+    };
+
     render() {
         return (
             <div>
-                <ContactList hello={"Yeah"} />
-                <InputHandler />
+                <ContactList contacts={this.state.contacts} />
+                <InputHandler onAddClick={this.onAddClick}/>
             </div>
     )
     }

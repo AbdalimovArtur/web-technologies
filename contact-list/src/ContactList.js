@@ -10,7 +10,7 @@ class ContactList extends React.Component {
     render() {
         return (
             <div>
-                Hello Contacts {this.props.hello}
+                {this.props.contacts.map((value, index) => <Contact contact={value}/>)}
             </div>
         )
     }
