@@ -19,11 +19,13 @@ class App extends Component {
     onSubmit = (event) => {
         event.preventDefault();
         this.setState({
-            todoList: [...this.state.todoList, {
-                'todo': this.state.inputValue,
-                'disabled': false,
-                'timestamp' : (new Date()).toString()
-            }],
+            todoList: [...this.state.todoList,
+                {
+                    'todo': this.state.inputValue,
+                    'disabled': false,
+                    'timestamp' : (new Date()).toString()
+                }
+                ],
             inputValue: '',
         });
     };
