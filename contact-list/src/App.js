@@ -3,6 +3,7 @@ import ContactList from './components/Contact/List/ContactList'
 import InputHandler from './components/Input/Input/index'
 import SearchHandler from './components/Input/Search/index'
 import 'bootstrap/dist/css/bootstrap.css'
+import Header from "./components/Header";
 
 class App extends Component {
 
@@ -43,10 +44,13 @@ class App extends Component {
 
     render() {
         return (
-            <div className="container">
-                <SearchHandler searchValueChanged={this.changeSearchValue}/>
-                <ContactList contacts={this.getContacts()} />
-                <InputHandler onAddClick={this.onAddClick}/>
+            <div>
+                <Header />
+                <div className="container">
+                    <SearchHandler searchValueChanged={this.changeSearchValue}/>
+                    <ContactList contacts={this.getContacts()} />
+                    <InputHandler onAddClick={this.onAddClick}/>
+                </div>
             </div>
     )
     }

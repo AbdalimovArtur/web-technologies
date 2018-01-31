@@ -1,0 +1,29 @@
+.navigation-container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 15px 0;
+}
+
+.navigation-link {
+    color: #90caf9;
+    padding: 0.5em 0 0.5em 0;
+    border: 2px solid transparent;
+}
+
+ul.navbar-nav li {
+    margin: 0 1em;
+}
+
+.navigation-link-active {
+    border-bottom: 2px solid #64b5f6;
+}
+
+.navigation {
+    background-color: white;
+}
+
+.navigation-link:hover {
+    color: #bbdefb;
+    border-bottom: 2px solid #e3f2fd;
+}
