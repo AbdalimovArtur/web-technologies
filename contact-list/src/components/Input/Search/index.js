@@ -1,5 +1,5 @@
 import React from 'react'
-import './contact.css'
+import './styles.css'
 
 class SearchHandler extends React.Component {
     constructor(props) {

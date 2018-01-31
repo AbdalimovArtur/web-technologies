@@ -1,6 +1,6 @@
 import React from 'react'
-import Contact from './Contact'
-import './contact.css'
+import Contact from '../Card/index'
+import './styles.css'
 
 class ContactList extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import './contact.css'
+import './styles.css'
 
 class InputHandler extends React.Component {
 

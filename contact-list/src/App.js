@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import ContactList from './ContactList'
-import InputHandler from './InputHandler'
-import SearchHandler from './SearchHandler'
+import ContactList from './components/Contact/List/ContactList'
+import InputHandler from './components/Input/Input/index'
+import SearchHandler from './components/Input/Search/index'
 import 'bootstrap/dist/css/bootstrap.css'
 
 class App extends Component {
