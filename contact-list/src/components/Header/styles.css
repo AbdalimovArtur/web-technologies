@@ -2,7 +2,8 @@
     width: 90%;
     margin: 0 auto;
     background-color: white;
-    padding: 15px 0;
+    padding: 10px 0 15px 0;
+    font-family: "Helvetica Neue";
 }
 
 .navigation-link {
@@ -23,7 +24,14 @@ ul.navbar-nav li {
     background-color: white;
 }
 
+.btn-like {
+    color: #1de9b6;
+    border: 2px solid #1de9b6 !important;
+    border-radius: 3px;
+}
+
 .navigation-link:hover {
     color: #bbdefb;
     border-bottom: 2px solid #e3f2fd;
 }
+
