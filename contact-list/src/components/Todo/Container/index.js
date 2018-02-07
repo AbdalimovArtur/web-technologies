@@ -4,19 +4,10 @@ import TodoItem from "../Item";
 
 class TodoContainer extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            cards: []
-        }
-    }
-
     render() {
         var cards = [];
-        for(var i = 1; i <= 4; i += 1) {
-            cards.push(
-                <TodoItem idNum={i}  />);
+        for(let i = 0; i < this.props.cards.length; i++) {
+                cards.push(<TodoItem idNum={i} card={this.props.cards[i]}/>);
         }
         return (
                 <div className="card-flex">{cards}</div>

@@ -22,18 +22,26 @@ class TodoCreator extends React.Component {
     };
 
     createTodo = (event) => {
+
         //
         // this.props.onAddClick(
         //     {
-        //         'taskName' : this.state.taskName,
-        //         'descriptionText': this.state.descriptionText,
+        //         'headerText' : this.state.headerText,
+        //         'description': this.state.description,
         //         'dueDate': this.state.dueDate
         //     });
+        let item = {
+            headerText: this.state.headerText,
+            description: this.state.description,
+            dueDate: this.state.dueDate
+        };
+
+        this.props.createTodo(item);
 
         this.setState({
-            taskName: '',
-            descriptionText: '',
-            dueDate: ''
+            headerText: '',
+            description: '',
+            dueDate: null
         })
     };
 
@@ -41,7 +49,6 @@ class TodoCreator extends React.Component {
         this.setState({
             dueDate: date
         });
-        console.log(this.state.dueDate);
     };
 
     render() {
@@ -50,12 +57,12 @@ class TodoCreator extends React.Component {
                 <div className="row justify-content-left">
                     <div className="col-md-8 mb-3">
                         <div className="mb-3">
-                            <label htmlFor="taskName">Task Name</label>
-                            <input type="text" name="taskName" className="form-control" onChange={this.inputValueChanged} value={this.state.taskName}/>
+                            <label htmlFor="headerText">Task Name</label>
+                            <input type="text" name="headerText" className="form-control" onChange={this.inputValueChanged} value={this.state.headerText}/>
                         </div>
                         <div className="mb-3">
                             <label htmlFor="descriptionName">Description</label>
-                            <textarea type="text" name="descriptionText" className="form-control" style={{'height': 200 + 'px'}} onChange={this.inputValueChanged} value={this.state.descriptionText}/>
+                            <textarea type="text" name="description" className="form-control" style={{'height': 200 + 'px'}} onChange={this.inputValueChanged} value={this.state.description}/>
                         </div>
                         <div className="col-md-4 mb-3">
                             <label htmlFor="dueDate">Due Date</label>
