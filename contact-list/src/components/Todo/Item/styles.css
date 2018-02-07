@@ -1,0 +1,5 @@
+.card-flex-item {
+    display: flex;
+    width: 33.33%;
+    padding-right: 1em;
+}

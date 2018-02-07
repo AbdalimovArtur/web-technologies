@@ -1,56 +1,27 @@
-import {Component} from "react";
-import 'bootstrap/dist/css/bootstrap.css'
-import * as React from "react";
-import ContactList from "../../Contact/List/ContactList";
-import InputHandler from "../../Input/Input";
-import SearchHandler from "../../Input/Search";
+import React from 'react'
+import './styles.css'
+import TodoItem from "../Item";
 
-class TodoContainer extends Component {
+class TodoContainer extends React.Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
-            contacts: [],
-            searchValue: ''
+            cards: []
         }
     }
 
-    onAddClick = (inputValue) => {
-        this.setState({
-            contacts: [...this.state.contacts,
-                {
-                    'firstName' : inputValue.firstName,
-                    'lastName' : inputValue.lastName,
-                    'contactNumber': inputValue.contactNumber
-                }
-            ]
-        })
-    };
-
-    getContacts = () => {
-        console.log(this.state.searchValue);
-        let p = this.state.contacts.slice();
-        p = p.filter(x => (this.state.searchValue === '' ? true : (x.firstName.startsWith(this.state.searchValue) ||
-            x.lastName.startsWith(this.state.searchValue) ||
-            x.contactNumber.startsWith(this.state.searchValue))));
-        return p
-    };
-
-    changeSearchValue = (newSearchValue) => {
-        this.setState({
-            searchValue: newSearchValue
-        })
-    };
-
     render() {
+        var cards = [];
+        for(var i = 1; i <= 4; i += 1) {
+            cards.push(
+                <TodoItem idNum={i}  />);
+        }
         return (
-            <div className="container">
-                <SearchHandler searchValueChanged={this.changeSearchValue}/>
-                <ContactList contacts={this.getContacts()} />
-                <InputHandler onAddClick={this.onAddClick}/>
-            </div>
-        )
+                <div className="card-flex">{cards}</div>
+        );
     }
 }
 
-export default TodoContainer;
+export default TodoContainer

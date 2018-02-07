@@ -16,14 +16,13 @@ class Header extends React.Component {
                      <div className="collapse navbar-collapse justify-content-end navigation-container" id="navbarNav">
                          <ul className="navbar-nav">
                              <li className="nav-item active">
-                                 <a className="nav-link navigation-link navigation-link-active" href="#">Home <span className="sr-only">(current)</span></a>
+                                 <Link to='/' className="nav-link navigation-link navigation-link-active">Home</Link>
                              </li>
                              <li className="nav-item">
-
-                                 <a className="nav-link navigation-link" href="#">Todo</a>
+                                 <Link to='/contact' className="nav-link navigation-link">Contacts</Link>
                              </li>
                              <li className="nav-item">
-                                 <a className="nav-link navigation-link" href="#">Contacts</a>
+                                 <Link to='/todo' className="nav-link navigation-link">Todo</Link>
                              </li>
                              <li className="nav-item">
                                  <a className="nav-link btn-like" href="#">Log In</a>
