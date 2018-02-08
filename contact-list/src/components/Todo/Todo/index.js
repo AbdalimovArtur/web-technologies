@@ -16,6 +16,7 @@ class Todo extends React.Component {
     todoItemAdded = (item) => {
         let tempCards = this.state.cards.slice();
         tempCards.push(item);
+        tempCards = tempCards.sort((a, b) => a.priority - b.priority);
         this.setState({
             cards: tempCards
         });
@@ -24,8 +25,8 @@ class Todo extends React.Component {
     render() {
         return (
             <div className="container">
-                <TodoContainer cards={this.state.cards} />
                 <TodoCreator createTodo={this.todoItemAdded}/>
+                <TodoContainer cards={this.state.cards} />
             </div>
         )
     }

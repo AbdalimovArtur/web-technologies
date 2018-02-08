@@ -3,3 +3,31 @@
     width: 33.33%;
     padding-right: 1em;
 }
+
+.card-flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    border: 3px solid;
+    margin-bottom: 1em;
+    margin-right: 0;
+    padding: 1em;
+}
+
+.card-flex-image img {
+    opacity: 0.8;
+}
+
+.card-flex-wrapper:hover {
+    /*cursor: pointer;*/
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+}
+
+.card-flex-wrapper:hover .card-flex-image img {
+    opacity: 1;
+    background-color: white;
+    transition: opacity 0.5s cubic-bezier(.43,.41,.22,.91);
+}
