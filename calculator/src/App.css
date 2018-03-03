@@ -1,0 +1,22 @@
+.button {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  margin: 10px;
+  vertical-align: middle;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+.inputFields {
+  margin: 20px;
+}
+
+.App {
+  margin: 0 auto;
+  padding: 50px;
+}
